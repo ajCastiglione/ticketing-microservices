@@ -1,8 +1,10 @@
 import express, { Request, Response } from "express";
 import { body } from "express-validator";
-import { validateRequest } from "../middleware/validate-requests";
+import {
+  validateRequest,
+  BadRequestError,
+} from "@minervawebdevelopment/common";
 import { User } from "../models/users";
-import { BadRequestError } from "../errors/bad-request-error";
 import { PasswordManager } from "../services/password";
 import jwt from "jsonwebtoken";
 
