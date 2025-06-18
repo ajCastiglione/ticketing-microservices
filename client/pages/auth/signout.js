@@ -17,7 +17,7 @@ const Signout = () => {
   }, []);
   return (
     <div>
-      <h1>fuck out</h1>
+      <h1>Sign Out</h1>
     </div>
   );
 };
