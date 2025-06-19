@@ -17,7 +17,7 @@ const start = async () => {
     console.error(error);
   }
   app.listen(PORT, () => {
-    console.log(`Auth service is running on port ${PORT}!!`);
+    console.log(`Tickets service is running on port ${PORT}!!`);
   });
 };
 
