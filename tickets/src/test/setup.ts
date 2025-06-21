@@ -33,8 +33,9 @@ declare global {
 }
 
 global.signin = () => {
+  const userId = new mongoose.Types.ObjectId().toHexString();
   const payload = {
-    id: "123abc",
+    id: userId,
     email: "test@test.com",
   };
 

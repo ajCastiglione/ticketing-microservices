@@ -9,6 +9,9 @@ import {
 } from "@minervawebdevelopment/common";
 
 import { createTicketRouter } from "./routes/new";
+import { showTicketRouter } from "./routes/show";
+import { indexTicketRouter } from "./routes/index";
+import { updateTicketRouter } from "./routes/update";
 
 const app = express();
 app.set("trust proxy", true); // Trust the reverse proxy (like Nginx or Kubernetes Ingress)
@@ -24,7 +27,10 @@ app.use(
 app.use(currentUser);
 
 // Routes
+app.use(indexTicketRouter);
 app.use(createTicketRouter);
+app.use(showTicketRouter);
+app.use(updateTicketRouter);
 
 // Catch-all route for undefined routes
 app.all("*", async () => {
